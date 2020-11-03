@@ -16,8 +16,8 @@
 		<project.junit-platform.version>1.6.0</project.junit-platform.version>
 		<maven.compiler.plugin>3.8</maven.compiler.plugin>
 		<maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>
-		<maven.compiler.source>12</maven.compiler.source>
-		<maven.compiler.target>12</maven.compiler.target>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
 		<javax.activation.version>1.2.0</javax.activation.version>
 		<jaxb.api.version>2.3.0</jaxb.api.version>
 	</properties>
