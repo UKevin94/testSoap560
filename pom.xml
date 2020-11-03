@@ -71,7 +71,7 @@
 		</dependency>
 	</dependencies>
 
-	<!--<build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.squashtest.ta.galaxia</groupId>
@@ -102,5 +102,5 @@
 			</plugin>
 
 		</plugins>
-	</build>-->
+	</build>
 </project>
