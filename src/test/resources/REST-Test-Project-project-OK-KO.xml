@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0baa80f4-42ab-48b9-96bc-d3c20d7ac767" created="3.3.2" activeEnvironment="Default" name="REST_Test_Project" updated="3.3.2 2020-08-19T12:03:33Z" encryptionMode="Not encrypted" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="4ab3b30a-60ed-4a3a-9ef7-b31ce96e4b45" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://jsonplaceholder.typicode.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="1 post" path="/posts/1" id="16980c37-142b-4cb6-b38f-6c983c1c4b54">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="a172f003-8d43-4234-b51b-25f8ea18e76a" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="https://jsonplaceholder.typicode.com/posts/1">ns:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="bf542d36-12d6-47f7-9522-d4c9c8e9acb9" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://jsonplaceholder.typicode.com/posts/1</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="posts" path="/posts" id="88bb908a-8c61-4491-8a60-0278755d3151">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="d59d159b-6931-4ac9-879f-0b3f6e333647" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:pos="https://jsonplaceholder.typicode.com/posts">pos:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="68755059-eae2-4661-b22e-4cae682d09f9" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://jsonplaceholder.typicode.com/posts</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="3032d239-f871-4905-8583-b5d8a040a676" name="TestSuite 1">
+    <con:description>The test suite generated for the REST service [https://jsonplaceholder.typicode.com]</con:description>
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="46fed5cd-a1e5-454a-9118-d5a23186fbd4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test_OK" searchProperties="true" timeout="0" maxResults="0">
+      <con:description>The test case generated for the REST resource [1] located at [/posts/1]</con:description>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Request 1" id="6a3ba0a9-d0ad-490e-8474-c4d47712eb42">
+        <con:settings/>
+        <con:config service="https://jsonplaceholder.typicode.com" resourcePath="/posts/1" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="bf542d36-12d6-47f7-9522-d4c9c8e9acb9" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://jsonplaceholder.typicode.com/posts/1</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="8943480c-1260-4909-b27f-937aa47e8618" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://jsonplaceholder.typicode.com/posts/1';
+//ns1:Response[1]/ns1:userId[1]</con:xpath>
+                  <con:element>userId</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://jsonplaceholder.typicode.com/posts/1';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://jsonplaceholder.typicode.com/posts/1';
+//ns1:Response[1]/ns1:title[1]</con:xpath>
+                  <con:element>title</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://jsonplaceholder.typicode.com/posts/1';
+//ns1:Response[1]/ns1:body[1]</con:xpath>
+                  <con:element>body</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="https://jsonplaceholder.typicode.com/posts/1">
+   <userId>1</userId>
+   <id>1</id>
+   <title>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</title>
+   <body>quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto</body>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="9a6b168e-32ad-4e5d-8566-49bf1e0b6cab" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="ef0e8ab9-4c01-4af0-b6e5-83b8d6962028" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Test_KO" searchProperties="true" timeout="0" maxResults="0">
+      <con:description>The test case generated for the REST resource [posts] located at [/posts]</con:description>
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Request 1" id="575546c9-7b48-48e4-965f-de7b9c6c2c0e">
+        <con:settings/>
+        <con:config service="https://jsonplaceholder.typicode.com" resourcePath="/posts" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="68755059-eae2-4661-b22e-4cae682d09f9" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://jsonplaceholder.typicode.com/posts</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="5bc028b4-a362-4ba6-80da-1bcc6504d2f2" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="c7a7e12f-499e-4333-a4dd-207b57b44e37" name="Message Content Assertion">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://jsonplaceholder.typicode.com/posts';
+//ns1:Response[1]/ns1:id[1]</con:xpath>
+                  <con:element>id</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>=</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>102</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage>&lt;Response xmlns="https://jsonplaceholder.typicode.com/posts">
+   &lt;id>101&lt;/id>
+&lt;/Response></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="354c460c-6f2b-4afe-99a8-b4f763383eed" name="JsonPath Match">
+              <con:configuration>
+                <path>id</path>
+                <content>${#TestCase#value}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>value</con:name>
+          <con:value>101</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
